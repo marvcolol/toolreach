@@ -1,6 +1,3 @@
-print("Thanks for using my toolreach!")
-print("https://github.com/marvcolol")
-
 local player = game.Players.LocalPlayer
 local backpack = player.Backpack
 
@@ -10,7 +7,7 @@ local function changeHandleSize(toolName)
     local tool = backpack:FindFirstChild(toolName)
     if tool and tool:FindFirstChild("Handle") then
         tool.Handle.Size = Vector3.new(250, 250, 250) -- Can be set higher but bigger handle is more lag and there is a limit to how big you can make it.
-        print(toolName .. " found.")
+        print(toolName .. " has been updated.") -- Tells you what tool(s) has been changed.
         return true
     end
     return false
@@ -26,5 +23,5 @@ for _, toolName in ipairs(toolNames) do
 end
 
 if not toolFound then
-    print("No eligible tools found.")
+    print("No eligible tools found.") -- If this prints then it could not find a working tool to reach with.
 end
