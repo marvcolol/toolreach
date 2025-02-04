@@ -1,7 +1,7 @@
 local player = game.Players.LocalPlayer
 local backpack = player.Backpack
 
-local toolNames = {"[Knife]", "Knife", "knife"}
+local toolNames = {"[Knife]", "[knife]", "Knife", "knife"}
 
 local function changeHandleSize(toolName)
     local tool = backpack:FindFirstChild(toolName)
